@@ -826,7 +826,7 @@ ruleHhmm :: Rule
 ruleHhmm = Rule
   { name = "hh:mm"
   , pattern =
-    [ regex "((?:[01]?\\d)|(?:2[0-3]))[:.ч]([0-5]\\d)(?:час(ов|а|у)?|ч)?"
+    [ regex "((?:[01]?\\d)|(?:2[0-3]))[:.ч\\s]([0-5]\\d)(?:час(ов|а|у)?|ч)?"
     ]
   , prod = \tokens -> case tokens of
       (Token RegexMatch (GroupMatch (m1:m2:_)):_) -> do
