@@ -382,7 +382,7 @@ ruleEvening :: Rule
 ruleEvening = Rule
   { name = "evening"
   , pattern =
-    [ regex "вечера|вечером"
+    [ regex "вечера|вечером|вечер"
     ]
   , prod = \_ ->
       let from = hour False 18
@@ -708,7 +708,7 @@ ruleMorning :: Rule
 ruleMorning = Rule
   { name = "morning"
   , pattern =
-    [ regex "утро|утром"
+    [ regex "утро|утром|утра"
     ]
   , prod = \_ ->
       let from = hour False 3
@@ -785,7 +785,7 @@ ruleNight :: Rule
 ruleNight = Rule
   { name = "night"
   , pattern =
-    [ regex "ночь(ю)?"
+    [ regex "ночь|ночи|ночью"
     ]
   , prod = \_ ->
       let from = hour False 0
