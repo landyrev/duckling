@@ -1,4 +1,4 @@
-VERSION = 1.0.0
+VERSION = 1.0.1
 IMAGE = eu.gcr.io/atlas-booking-bot-yyevki/duckling:$(VERSION)
 
 .PHONY: build push
